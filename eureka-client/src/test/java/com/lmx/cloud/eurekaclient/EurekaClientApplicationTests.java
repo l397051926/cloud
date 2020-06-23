@@ -1,11 +1,11 @@
-package com.lmx.cloud.eurekaservice;
+package com.lmx.cloud.eurekaclient;
 
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaServiceApplicationTests {
+class EurekaClientApplicationTests {
 
     @Test
     void contextLoads() {
