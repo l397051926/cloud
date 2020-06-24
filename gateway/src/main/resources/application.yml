@@ -14,9 +14,15 @@ spring:
       routes:
         #可以 增加 过滤机智 before after between等
         - id: eureka-client
-          uri: http://localhost:8000/
+          uri: lb://eureka-client/
           predicates:
-            - Path=/eureka
+            - Path=/eureka/**
+          filters:
+            - StripPrefix=1
+        - id: feign-service
+          uri: lb://feign-service/
+          predicates:
+            - Path=/feign/**
           filters:
             - StripPrefix=1
 eureka:
